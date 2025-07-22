@@ -6,11 +6,25 @@
     list-style: none;
 }
 
+:root {
+    --tc-bg-light: #eaf6ff;
+    --tc-bg-gradient: linear-gradient(135deg, #eaf6ff 0%, #b3e0ff 100%);
+    --tc-primary-blue: #2563eb;
+    --tc-accent-blue: #23406e;
+    --tc-yellow: #ffe600;
+    --tc-dark-blue: #003366;
+    --tc-white: #fff;
+    --tc-soft-blue: #b3e0ff;
+    --tc-soft-text: #23406e;
+    --tc-text-main: #23406e;
+    --tc-text-secondary: #2563eb;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #ffffff;
+    color: var(--tc-text-main);
+    background: var(--tc-bg-gradient);
 }
 
 .container {
@@ -24,9 +38,10 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.97);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 2px solid var(--tc-soft-blue);
+    box-shadow: 0 2px 12px rgba(179,224,255,0.08);
     z-index: 1000;
     transition: all 0.3s ease;
 }
@@ -47,7 +62,7 @@ body {
     gap: 10px;
     font-size: 1.5rem;
     font-weight: 600;
-    color: #1f2937;
+    color: var(--tc-accent-blue);
 }
 
 .nav-logo i {
@@ -63,14 +78,14 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: #6b7280;
+    color: var(--tc-accent-blue);
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
 }
 
 .nav-link:hover {
-    color: #3b82f6;
+    color: var(--tc-primary-blue);
 }
 
 .nav-link::after {
@@ -230,10 +245,6 @@ body {
     color: #6b7280;
     max-width: 600px;
     margin: 0 auto;
-}
-
-.bg-light {
-    background-color: #f9fafb;
 }
 
 /* SOPs Section */
@@ -764,9 +775,12 @@ body {
     word-break: break-word;
 }
 .support-matrix-table th {
-    background: #f3f4f6;
+    background: #eaf6ff;
     font-weight: 600;
-    color: #1f2937;
+    color: var(--tc-accent-blue);
+}
+.support-matrix-table td {
+    color: var(--tc-soft-text);
 }
 .support-matrix-table tr:last-child td {
     border-bottom: none;
@@ -775,7 +789,7 @@ body {
     background: #f9fafb;
 }
 .support-matrix-table tbody tr:hover {
-    background: #e0e7ff;
+    background: #b3e0ff44;
     transition: background 0.2s;
 }
 @media (max-width: 800px) {
@@ -872,9 +886,9 @@ body {
 
 /* Info Card Styles */
 .info-card {
-    background: #fff;
+    background: var(--tc-white);
     border-radius: 18px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    box-shadow: 0 4px 24px rgba(179,224,255,0.13);
     padding: 40px 32px 32px 32px;
     width: 75%;
     max-width: 900px;
@@ -896,18 +910,17 @@ body {
     transform: translateY(-4px) scale(1.01);
 }
 .info-title {
-    font-size: 2.1rem;
+    color: var(--tc-accent-blue);
     font-weight: 700;
-    color: #1e293b;
+    letter-spacing: 0.01em;
     display: flex;
     align-items: center;
     gap: 14px;
     margin-bottom: 18px;
 }
 .info-subtitle {
-    font-size: 1.15rem;
+    color: var(--tc-primary-blue);
     font-weight: 600;
-    color: #2563eb;
     margin: 24px 0 10px 0;
     display: flex;
     align-items: center;
@@ -950,23 +963,26 @@ body {
     color: #374151;
 }
 .info-contact .contact-icon {
-    color: #2563eb;
+    color: var(--tc-primary-blue);
     font-size: 1.2em;
 }
-.btn.btn-primary {
-    background: linear-gradient(90deg, #2563eb 0%, #3b82f6 100%);
-    color: #fff;
+.btn.btn-primary, .it-support-btn {
+    background: linear-gradient(90deg, var(--tc-soft-blue) 0%, var(--tc-primary-blue) 100%);
+    color: var(--tc-white);
     border: none;
-    border-radius: 8px;
+    border-radius: 32px;
     padding: 12px 28px;
     font-size: 1.1rem;
     font-weight: 600;
-    box-shadow: 0 2px 8px rgba(59,130,246,0.08);
-    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 12px rgba(35,64,110,0.07);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+    outline: none;
 }
-.btn.btn-primary:hover {
-    background: linear-gradient(90deg, #1d4ed8 0%, #2563eb 100%);
-    box-shadow: 0 4px 16px rgba(59,130,246,0.13);
+.btn.btn-primary:hover, .it-support-btn:hover, .btn.btn-primary:focus, .it-support-btn:focus {
+    background: linear-gradient(90deg, var(--tc-primary-blue) 0%, var(--tc-soft-blue) 100%);
+    color: var(--tc-white);
+    box-shadow: 0 4px 20px rgba(35,64,110,0.13);
+    transform: translateY(-2px) scale(1.03);
 }
 @media (max-width: 1000px) {
     .info-card {
@@ -976,4 +992,74 @@ body {
     .info-title {
         font-size: 1.3rem;
     }
+} 
+
+/* Yellow accent for highlights */
+.highlight-yellow {
+    color: var(--tc-yellow);
+    font-weight: bold;
+}
+
+/* Add more as needed for other UI elements */ 
+
+/* IT Support Quick Access Buttons Section */
+#it-support-buttons {
+    background: var(--tc-bg-light);
+    margin-bottom: 0;
+    border-bottom: 1px solid #d6f0ff;
+}
+#it-support-buttons .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: center;
+    padding: 32px 0 12px 0;
+}
+.it-support-btn {
+    min-width: 220px;
+    padding: 18px 32px;
+    font-size: 1.13rem;
+    font-weight: 600;
+    border-radius: 32px;
+    background: linear-gradient(90deg, var(--tc-soft-blue) 0%, var(--tc-primary-blue) 100%);
+    color: var(--tc-white);
+    border: none;
+    box-shadow: 0 2px 12px rgba(35,64,110,0.07);
+    margin-bottom: 8px;
+    outline: none;
+}
+
+/* Reveal animation for IT support sections */
+.it-support-section {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    will-change: opacity;
+}
+.it-support-section[style*="display: block"] {
+    opacity: 1;
+    pointer-events: auto;
+    animation: fadeInSection 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
+@keyframes fadeInSection {
+    from { opacity: 0; transform: translateY(40px) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Responsive for buttons */
+@media (max-width: 700px) {
+    .it-support-btn {
+        min-width: 140px;
+        font-size: 1rem;
+        padding: 12px 10px;
+    }
+    #it-support-buttons .container {
+        gap: 10px;
+        padding: 18px 0 6px 0;
+    }
+} 
+
+/* Softer section backgrounds */
+.section.bg-light {
+    background: #f6fbff;
 } 

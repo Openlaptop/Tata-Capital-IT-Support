@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initFormHandling();
     initPerformanceChart();
     initScrollEffects();
+    initITSupportButtons();
 });
 
 // Navigation functionality
@@ -534,6 +535,27 @@ function initScrollEffects() {
         el.style.transform = 'translateY(30px)';
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
+    });
+}
+
+// Show IT support section on button click
+function initITSupportButtons() {
+    const buttons = document.querySelectorAll('.it-support-btn');
+    const sections = document.querySelectorAll('.it-support-section');
+    buttons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const targetId = this.getAttribute('data-target');
+            sections.forEach(sec => {
+                if (sec.id === targetId) {
+                    sec.style.display = 'block';
+                    setTimeout(() => {
+                        sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 50);
+                } else {
+                    sec.style.display = 'none';
+                }
+            });
+        });
     });
 }
 

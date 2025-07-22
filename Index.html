@@ -18,21 +18,6 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
-                <li class="dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">IT Support Guide <i class="fas fa-caret-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#why-service-desk">Why IT Service Desk</a></li>
-                        <li><a href="#how-to-raise-request">How to Raise Request</a></li>
-                        <li><a href="#password-change-policy">Password Change Policy</a></li>
-                        <li><a href="#self-service-reset">User Self Service Password Reset Facility</a></li>
-                        <li><a href="#it-awareness-guide">IT Awareness Guide</a></li>
-                        <li><a href="#email-policy">Company Email Policy – Tata Capital</a></li>
-                        <li><a href="#data-backup">Data Backup – How to Take Backup</a></li>
-                        <li><a href="#dos-donts">Do’s and Don'ts @ Branch</a></li>
-                        <li><a href="#it-guidelines">IT Guidelines @ Branch</a></li>
-                        <li><a href="#support-matrix">Tata Capital – IT Support Matrix</a></li>
-                    </ul>
-                </li>
                 <li><a href="#escalation" class="nav-link">Escalation</a></li>
                 <li><a href="#metrics" class="nav-link">Metrics</a></li>
                 <li><a href="#process" class="nav-link">Process</a></li>
@@ -106,6 +91,22 @@
                     <button class="btn btn-outline" onclick="openModal('data-sop')">View Details</button>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- IT Support Quick Access Buttons Section -->
+    <section id="it-support-buttons" class="section" style="padding-top: 0;">
+        <div class="container" style="display: flex; flex-wrap: wrap; gap: 18px; justify-content: center;">
+            <button class="btn btn-primary it-support-btn" data-target="why-service-desk">Why IT Service Desk</button>
+            <button class="btn btn-primary it-support-btn" data-target="how-to-raise-request">How to Raise Request</button>
+            <button class="btn btn-primary it-support-btn" data-target="password-change-policy">Password Change Policy</button>
+            <button class="btn btn-primary it-support-btn" data-target="self-service-reset">User Self Service Password Reset Facility</button>
+            <button class="btn btn-primary it-support-btn" data-target="it-awareness-guide">IT Awareness Guide</button>
+            <button class="btn btn-primary it-support-btn" data-target="email-policy">Company Email Policy – Tata Capital</button>
+            <button class="btn btn-primary it-support-btn" data-target="data-backup">Data Backup – How to Take Backup</button>
+            <button class="btn btn-primary it-support-btn" data-target="dos-donts">Do’s and Don'ts @ Branch</button>
+            <button class="btn btn-primary it-support-btn" data-target="it-guidelines">IT Guidelines @ Branch</button>
+            <button class="btn btn-primary it-support-btn" data-target="support-matrix">Tata Capital – IT Support Matrix</button>
         </div>
     </section>
 
@@ -251,7 +252,7 @@
     </section>
 
     <!-- Why IT Service Desk Section -->
-    <section id="why-service-desk" class="section bg-light">
+    <section id="why-service-desk" class="section bg-light it-support-section" style="display:none;">
         <div class="container">
             <div class="info-card">
                 <div class="info-title"><i class="fas fa-headset"></i> Why IT Service Desk</div>
@@ -283,7 +284,7 @@
     </section>
 
     <!-- How to Raise Request Section -->
-    <section id="how-to-raise-request" class="section">
+    <section id="how-to-raise-request" class="section it-support-section" style="display:none;">
         <div class="container">
             <div class="section-header">
                 <h2>How to Raise Request</h2>
@@ -293,7 +294,7 @@
     </section>
 
     <!-- Password Change Policy Section -->
-    <section id="password-change-policy" class="section bg-light">
+    <section id="password-change-policy" class="section bg-light it-support-section" style="display:none;">
         <div class="container">
             <div class="info-card">
                 <div class="info-title"><i class="fas fa-lock"></i> Password Change Policy – Every 45 Days</div>
@@ -337,7 +338,7 @@
     </section>
 
     <!-- User Self Service Password Reset Facility Section -->
-    <section id="self-service-reset" class="section">
+    <section id="self-service-reset" class="section it-support-section" style="display:none;">
         <div class="container">
             <div class="info-card">
                 <div class="info-title"><i class="fas fa-user-cog"></i> User Self Service Password Reset Facility</div>
@@ -366,7 +367,7 @@
     </section>
 
     <!-- IT Awareness Guide Section -->
-    <section id="it-awareness-guide" class="section bg-light">
+    <section id="it-awareness-guide" class="section bg-light it-support-section" style="display:none;">
         <div class="container">
             <div class="info-card">
                 <div class="info-title"><i class="fas fa-lightbulb"></i> IT Awareness Guide – Tata Capital</div>
@@ -433,7 +434,7 @@
     </section>
 
     <!-- Company Email Policy – Tata Capital Section -->
-    <section id="email-policy" class="section">
+    <section id="email-policy" class="section it-support-section" style="display:none;">
         <div class="container">
             <div class="info-card">
                 <div class="info-title"><i class="fas fa-envelope"></i> Company Email Policy – Tata Capital</div>
@@ -466,7 +467,7 @@
     </section>
 
     <!-- Data Backup – How to Take Backup Section -->
-    <section id="data-backup" class="section bg-light">
+    <section id="data-backup" class="section bg-light it-support-section" style="display:none;">
         <div class="container">
             <div class="section-header">
                 <h2>Data Backup – How to Take Backup</h2>
@@ -476,7 +477,7 @@
     </section>
 
     <!-- Do’s and Don'ts @ Branch Section -->
-    <section id="dos-donts" class="section">
+    <section id="dos-donts" class="section it-support-section" style="display:none;">
         <div class="container">
             <div class="section-header">
                 <h2>Do’s and Don'ts @ Branch</h2>
@@ -486,7 +487,7 @@
     </section>
 
     <!-- IT Guidelines @ Branch Section -->
-    <section id="it-guidelines" class="section bg-light">
+    <section id="it-guidelines" class="section bg-light it-support-section" style="display:none;">
         <div class="container">
             <div class="section-header">
                 <h2>IT Guidelines @ Branch</h2>
@@ -496,7 +497,7 @@
     </section>
 
     <!-- Tata Capital – IT Support Matrix Section -->
-    <section id="support-matrix" class="section">
+    <section id="support-matrix" class="section it-support-section" style="display:none;">
         <div class="container">
             <div class="info-card">
                 <div class="info-title"><i class="fas fa-table"></i> Tata Capital – IT Support Matrix</div>
