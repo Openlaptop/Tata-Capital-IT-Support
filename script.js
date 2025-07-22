@@ -547,10 +547,14 @@ function initITSupportButtons() {
             const targetId = this.getAttribute('data-target');
             sections.forEach(sec => {
                 if (sec.id === targetId) {
-                    sec.style.display = 'block';
-                    setTimeout(() => {
-                        sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }, 50);
+                    if (sec.style.display === 'block') {
+                        sec.style.display = 'none';
+                    } else {
+                        sec.style.display = 'block';
+                        setTimeout(() => {
+                            sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }, 50);
+                    }
                 } else {
                     sec.style.display = 'none';
                 }

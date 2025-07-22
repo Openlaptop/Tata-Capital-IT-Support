@@ -119,12 +119,13 @@ body {
 
 /* Hero Section */
 .hero {
-    padding: 120px 0 80px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    min-height: 100vh;
+    background: var(--tc-bg-gradient);
+    color: var(--tc-accent-blue);
+    padding: 80px 0 60px 0;
+    min-height: 420px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .hero-container {
@@ -967,19 +968,18 @@ body {
     font-size: 1.2em;
 }
 .btn.btn-primary, .it-support-btn {
-    background: linear-gradient(90deg, var(--tc-soft-blue) 0%, var(--tc-primary-blue) 100%);
+    background: var(--tc-soft-blue);
     color: var(--tc-white);
     border: none;
     border-radius: 32px;
-    padding: 12px 28px;
-    font-size: 1.1rem;
-    font-weight: 600;
     box-shadow: 0 2px 12px rgba(35,64,110,0.07);
+    font-weight: 600;
+    letter-spacing: 0.01em;
     transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
     outline: none;
 }
 .btn.btn-primary:hover, .it-support-btn:hover, .btn.btn-primary:focus, .it-support-btn:focus {
-    background: linear-gradient(90deg, var(--tc-primary-blue) 0%, var(--tc-soft-blue) 100%);
+    background: var(--tc-primary-blue);
     color: var(--tc-white);
     box-shadow: 0 4px 20px rgba(35,64,110,0.13);
     transform: translateY(-2px) scale(1.03);
@@ -1021,12 +1021,20 @@ body {
     font-size: 1.13rem;
     font-weight: 600;
     border-radius: 32px;
-    background: linear-gradient(90deg, var(--tc-soft-blue) 0%, var(--tc-primary-blue) 100%);
+    background: var(--tc-soft-blue);
     color: var(--tc-white);
     border: none;
     box-shadow: 0 2px 12px rgba(35,64,110,0.07);
     margin-bottom: 8px;
     outline: none;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+    cursor: pointer;
+}
+.it-support-btn:hover, .it-support-btn:focus {
+    background: var(--tc-primary-blue);
+    color: var(--tc-white);
+    box-shadow: 0 4px 20px rgba(35,64,110,0.13);
+    transform: translateY(-2px) scale(1.03);
 }
 
 /* Reveal animation for IT support sections */
