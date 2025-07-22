@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tata Capital IT Support Service</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>Tata Capital IT Support</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">IT Support Guide <i class="fas fa-caret-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#why-service-desk">Why IT Service Desk</a></li>
+                        <li><a href="#how-to-raise-request">How to Raise Request</a></li>
+                        <li><a href="#password-change-policy">Password Change Policy</a></li>
+                        <li><a href="#self-service-reset">User Self Service Password Reset Facility</a></li>
+                        <li><a href="#it-awareness-guide">IT Awareness Guide</a></li>
+                        <li><a href="#email-policy">Company Email Policy – Tata Capital</a></li>
+                        <li><a href="#data-backup">Data Backup – How to Take Backup</a></li>
+                        <li><a href="#dos-donts">Do’s and Don'ts @ Branch</a></li>
+                        <li><a href="#it-guidelines">IT Guidelines @ Branch</a></li>
+                        <li><a href="#support-matrix">Tata Capital – IT Support Matrix</a></li>
+                    </ul>
+                </li>
+                <li><a href="#escalation" class="nav-link">Escalation</a></li>
+                <li><a href="#metrics" class="nav-link">Metrics</a></li>
+                <li><a href="#process" class="nav-link">Process</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Professional IT Support Services</h1>
+                <p>Delivering exceptional technical support with streamlined processes, comprehensive SOPs, and data-driven metrics to ensure optimal business continuity.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('sops')">View SOPs</button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('contact')">Get Support</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-graphic">
+                    <i class="fas fa-cogs"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOPs Section -->
+    <section id="sops" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Standard Operating Procedures</h2>
+                <p>Comprehensive guidelines for consistent and efficient IT support operations</p>
+            </div>
+            <div class="sops-grid">
+                <div class="sop-card">
+                    <div class="sop-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h3>Ticket Management</h3>
+                    <p>Standard procedures for creating, tracking, and resolving support tickets</p>
+                    <button class="btn btn-outline" onclick="openModal('ticket-sop')">View Details</button>
+                </div>
+                <div class="sop-card">
+                    <div class="sop-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Security Protocols</h3>
+                    <p>Security best practices and incident response procedures</p>
+                    <button class="btn btn-outline" onclick="openModal('security-sop')">View Details</button>
+                </div>
+                <div class="sop-card">
+                    <div class="sop-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Network Support</h3>
+                    <p>Network troubleshooting and maintenance procedures</p>
+                    <button class="btn btn-outline" onclick="openModal('network-sop')">View Details</button>
+                </div>
+                <div class="sop-card">
+                    <div class="sop-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Data Management</h3>
+                    <p>Data backup, recovery, and management procedures</p>
+                    <button class="btn btn-outline" onclick="openModal('data-sop')">View Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Escalation Section -->
+    <section id="escalation" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Escalation Matrix</h2>
+                <p>Clear escalation paths for timely issue resolution</p>
+            </div>
+            <div class="escalation-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker level-1"></div>
+                    <div class="timeline-content">
+                        <h3>Level 1 - First Response</h3>
+                        <p>Initial support team handles basic issues and ticket creation</p>
+                        <div class="timeline-details">
+                            <span><strong>Response Time:</strong> 15 minutes</span>
+                            <span><strong>Resolution Time:</strong> 2 hours</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker level-2"></div>
+                    <div class="timeline-content">
+                        <h3>Level 2 - Technical Support</h3>
+                        <p>Advanced technical issues escalated to specialized teams</p>
+                        <div class="timeline-details">
+                            <span><strong>Response Time:</strong> 30 minutes</span>
+                            <span><strong>Resolution Time:</strong> 4 hours</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker level-3"></div>
+                    <div class="timeline-content">
+                        <h3>Level 3 - Expert Support</h3>
+                        <p>Complex issues escalated to senior engineers and specialists</p>
+                        <div class="timeline-details">
+                            <span><strong>Response Time:</strong> 1 hour</span>
+                            <span><strong>Resolution Time:</strong> 8 hours</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker level-4"></div>
+                    <div class="timeline-content">
+                        <h3>Level 4 - Management Escalation</h3>
+                        <p>Critical issues escalated to management and external vendors</p>
+                        <div class="timeline-details">
+                            <span><strong>Response Time:</strong> 2 hours</span>
+                            <span><strong>Resolution Time:</strong> 24 hours</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- IT Support Matrix Table for Escalation Section
+        <div style="margin-top: 40px;">
+            <h3 style="color:#2563eb; margin-bottom: 12px;"><i class="fas fa-table"></i> Tata Capital – IT Support Matrix</h3>
+            <div class="info-subtitle"><i class="fas fa-users"></i> For the Non-RE location where engineer physically not available</div>
+            <div style="overflow-x:auto;">
+                <table class="support-matrix-table">
+                    <thead>
+                        <tr>
+                            <th>Level</th>
+                            <th>Role/Region</th>
+                            <th>S2 - Entire Branch Impacted</th>
+                            <th>S3 - One User Impacted</th>
+                            <th>Contact Name</th>
+                            <th>Mail ID</th>
+                            <th>Contact Number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td rowspan="4"><strong>Level 1</strong><br>Engineer</td><td>Regional IT Coordinators West</td><td>After Working 4 Hrs</td><td>After 8 Working Hrs</td><td>Ankit Patel</td><td><a href="mailto:support.west@tatacapital.com">support.west@tatacapital.com</a></td><td>9424768426</td></tr>
+                        <tr><td>Regional IT Coordinators North</td><td>After Working 4 Hrs</td><td>After 8 Working Hrs</td><td>Anand Kumar</td><td><a href="mailto:support.north@tatacapital.com">support.north@tatacapital.com</a></td><td>9560045339</td></tr>
+                        <tr><td>Regional IT Coordinators East</td><td>After Working 4 Hrs</td><td>After 8 Working Hrs</td><td>Kabir Sikdar</td><td><a href="mailto:support.east@tatacapital.com">support.east@tatacapital.com</a></td><td>9883348686</td></tr>
+                        <tr><td>Regional IT Coordinators South</td><td>After Working 4 Hrs</td><td>After 8 Working Hrs</td><td>Vikas Kumar</td><td><a href="mailto:support.south@tatacapital.com">support.south@tatacapital.com</a></td><td>7004039157</td></tr>
+                        <tr><td rowspan="2"><strong>Level 1</strong><br>Team Lead</td><td>IT Team Lead Lower Parel</td><td>After Working 4 Hrs</td><td>After 8 Working Hrs</td><td>Abhijit Sarvankar</td><td><a href="mailto:sabhijeet.karvy@tatacapital.com">sabhijeet.karvy@tatacapital.com</a></td><td>9930896914</td></tr>
+                        <tr><td>IT Team Lead Thane Lodha</td><td>After Working 4 Hrs</td><td>After 8 Working Hrs</td><td>Shehzad Unawala</td><td><a href="mailto:ushehzad.svn@tatacapital.com">ushehzad.svn@tatacapital.com</a></td><td>9867639333</td></tr>
+                        <tr><td rowspan="2"><strong>Level 1</strong><br>Central IT</td><td>Central IT Team Lead</td><td>After Working 4 Hrs</td><td>After 8 Working Hrs</td><td>Varun Raj</td><td><a href="mailto:rvarun.svn@tatacapital.com">rvarun.svn@tatacapital.com</a></td><td>7013273064</td></tr>
+                        <tr><td>Central IT Team Manager</td><td>After Working 4 Hrs</td><td>After 8 Working Hrs</td><td>Krishna Mohan</td><td><a href="mailto:kmohan.hcl@tatacapital.com">kmohan.hcl@tatacapital.com</a></td><td>9949997733</td></tr>
+                        <tr><td colspan="7" style="background:#f3f4f6;"><strong>For all your Asset management related mail please send on <a href='mailto:itassetmanagement@tatacapital.com'>itassetmanagement@tatacapital.com</a></strong></td></tr>
+                        <tr><td><strong>Level 2</strong></td><td colspan="2">If no resolution within 10 working hours</td><td colspan="2">Anandmohan Jha (7400166984)</td><td colspan="2"><a href="mailto:janandmohan.svn@tatacapital.com">janandmohan.svn@tatacapital.com</a></td></tr>
+                        <tr><td><strong>Level 3</strong></td><td colspan="2">If no resolution after <strong>12 working hours</strong></td><td colspan="2">Vivek Gijare</td><td colspan="2"><a href="mailto:vivek.gijare@tatacapital.com">vivek.gijare@tatacapital.com</a></td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <ul class="info-list" style="margin-top:18px;">
+                <li>All regional coordinators and team leads report to the Central IT Team Manager.</li>
+                <li>Escalate to Level 2 and Level 3 only if your issue is not resolved within the specified timeframes.</li>
+                <li>Refer to this matrix for direct contacts at each escalation level.</li>
+            </ul>
+        </div>
+    </section> -->
+
+    <!-- Metrics Section -->
+    <section id="metrics" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Performance Metrics</h2>
+                <p>Key performance indicators and service level agreements</p>
+            </div>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="metric-value">98.5%</div>
+                    <div class="metric-label">First Response SLA</div>
+                    <div class="metric-target">Target: 95%</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="metric-value">94.2%</div>
+                    <div class="metric-label">Resolution SLA</div>
+                    <div class="metric-target">Target: 90%</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <div class="metric-value">4.8/5</div>
+                    <div class="metric-label">Customer Satisfaction</div>
+                    <div class="metric-target">Target: 4.5/5</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="metric-value">2.3 hrs</div>
+                    <div class="metric-label">Average Resolution Time</div>
+                    <div class="metric-target">Target: 4 hrs</div>
+                </div>
+            </div>
+            <div class="metrics-chart">
+                <canvas id="performanceChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why IT Service Desk Section -->
+    <section id="why-service-desk" class="section bg-light">
+        <div class="container">
+            <div class="info-card">
+                <div class="info-title"><i class="fas fa-headset"></i> Why IT Service Desk</div>
+                <p style="margin-bottom: 18px;">The IT Service Desk is your single point of contact for all IT-related needs at Tata Capital. It ensures that your issues and requests are tracked, managed, and resolved efficiently.</p>
+                <div class="info-subtitle"><i class="fas fa-list-check"></i> What It Handles</div>
+                <ul class="info-list">
+                    <li><strong>Incidents:</strong> Hardware issues, printer problems, network outages, email issues, etc.</li>
+                    <li><strong>Requests:</strong> New hardware/software requests, access permissions, etc.</li>
+                    <li><strong>Asset Management:</strong> Maintains and manages IT assets across the organization.</li>
+                    <li>Every request/incident is tracked until resolution.</li>
+                    <li>Requests not logged with the IT Service Desk may be missed.</li>
+                </ul>
+                <div class="info-subtitle"><i class="fas fa-phone-volume"></i> How to Contact the IT Service Desk</div>
+                <ul class="info-list">
+                    <li>Online Self-Service (24x7) – Most Preferred: <a href="http://itservicedesk.tatacapital.com" target="_blank">itservicedesk.tatacapital.com</a></li>
+                    <li>Email: <a href="mailto:ITService@tatacapital.com">ITService@tatacapital.com</a></li>
+                    <li>Phone: 040-6602 7799</li>
+                </ul>
+                <p style="margin-bottom: 0;">You will receive a ticket number and severity level upon logging a request. You can track the status online using the ticket number.</p>
+                <div class="info-subtitle"><i class="fas fa-clock"></i> Service Window</div>
+                <ul class="info-list">
+                    <li><strong>Operational Hours:</strong> 9 AM – 9 PM (Monday to Saturday)</li>
+                    <li><strong>Resident Engineers:</strong> Available 9:30 AM – 6:30 PM</li>
+                    <li><strong>After 6 PM:</strong> Contact the Service Desk directly</li>
+                    <li><strong>Note:</strong> The Service Desk supports all TCL group companies</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Raise Request Section -->
+    <section id="how-to-raise-request" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>How to Raise Request</h2>
+                <p>[Add content from PDF here]</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Password Change Policy Section -->
+    <section id="password-change-policy" class="section bg-light">
+        <div class="container">
+            <div class="info-card">
+                <div class="info-title"><i class="fas fa-lock"></i> Password Change Policy – Every 45 Days</div>
+                <div class="info-subtitle"><i class="fas fa-thumbtack"></i> Policy Statement</div>
+                <p>All users are required to change their system passwords every 45 days to maintain the security and integrity of the organization's IT systems.</p>
+                <div class="info-subtitle"><i class="fas fa-check-circle"></i> Key Guidelines</div>
+                <ul class="info-list">
+                    <li>Passwords must be updated before the 45-day expiration.</li>
+                    <li>Users will receive automated reminders starting 7 days before expiry.</li>
+                    <li>Passwords must meet the following criteria:
+                        <ul class="info-list">
+                            <li>Minimum 8 characters</li>
+                            <li>At least one uppercase letter</li>
+                            <li>At least one lowercase letter</li>
+                            <li>At least one number</li>
+                            <li>At least one special character (e.g., @, #, $, etc.)</li>
+                        </ul>
+                    </li>
+                    <li>Reuse of the last 3 passwords is not allowed.</li>
+                </ul>
+                <div class="info-subtitle"><i class="fas fa-exclamation-triangle"></i> Non-Compliance</div>
+                <ul class="info-list">
+                    <li>Failure to change the password within the 45-day window will result in:</li>
+                    <li>Account lockout</li>
+                    <li>Required contact with IT Helpdesk for reset</li>
+                </ul>
+                <div class="info-subtitle"><i class="fas fa-key"></i> How to Change Your Password</div>
+                <ul class="info-list">
+                    <li>Press <strong>Ctrl + Alt + Delete</strong></li>
+                    <li>Select <strong>Change a password</strong></li>
+                    <li>Enter your current password and the new password</li>
+                    <li>Confirm and submit</li>
+                </ul>
+                <div class="info-subtitle"><i class="fas fa-question-circle"></i> Need Help?</div>
+                <div class="info-contact">
+                    <div class="contact-item"><span class="contact-icon"><i class="fas fa-envelope"></i></span> <a href="mailto:itservice@tatacapital.com">itservice@tatacapital.com</a></div>
+                    <div class="contact-item"><span class="contact-icon"><i class="fas fa-phone"></i></span> 040-6602 7799</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Self Service Password Reset Facility Section -->
+    <section id="self-service-reset" class="section">
+        <div class="container">
+            <div class="info-card">
+                <div class="info-title"><i class="fas fa-user-cog"></i> User Self Service Password Reset Facility</div>
+                <p style="margin-bottom: 18px;">Users can use the User Self Service Password Reset facility to reset their domain ID/email ID password anytime, from anywhere, using either of the two options below.</p>
+                <div class="info-subtitle"><i class="fas fa-globe"></i> Option 1: Using Web-based Link</div>
+                <p>If your computer is connected to the Internet, you may change your password by visiting the following URL:</p>
+                <a href="https://apps6.tatacapital.com/iisadmpwd/" target="_blank" class="btn btn-primary" style="margin-bottom: 16px;">Reset Password Online</a>
+                <div class="info-subtitle"><i class="fas fa-sms"></i> Option 2: Using SMS Facility from Your Registered Mobile Number</div>
+                <ul class="info-list">
+                    <li>To reset domain ID/email ID password (if your password is not accepted or expired):<br>
+                        Send SMS <strong>RESET TCL</strong> to <strong>9246828041</strong> (New password will be sent to your mobile via SMS)
+                    </li>
+                    <li>To unlock domain ID (if you get "Your account has been locked out"):<br>
+                        Send SMS <strong>UNLOCK TCL</strong> to <strong>9246828041</strong> (Account will be unlocked and confirmation sent via SMS. You can continue using the same password for login)
+                    </li>
+                </ul>
+                <p><strong>Note:</strong> Ensure the SMS is sent from your registered mobile number only. Keep your correct mobile number updated in Outlook.</p>
+                <div class="info-subtitle"><i class="fas fa-info-circle"></i> Please Note</div>
+                <ul class="info-list">
+                    <li>Your new password must comply with the company’s password policy: minimum 8 characters, at least one number (0-9), and at least one special character (e.g., @, #, !, $). You cannot reuse your last 5 passwords.</li>
+                    <li>New password is immediately effective for VPN login, all business applications, AD-integrated business applications, web-based systems, and Office 365 applications (Outlook, OneDrive, etc.).</li>
+                    <li>For laptop/desktop local logon (Ctrl+Alt+Del), continue using your old password until you next connect to the corporate network (VPN or LAN). After connecting, your local logon password will synchronize to your new password.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- IT Awareness Guide Section -->
+    <section id="it-awareness-guide" class="section bg-light">
+        <div class="container">
+            <div class="info-card">
+                <div class="info-title"><i class="fas fa-lightbulb"></i> IT Awareness Guide – Tata Capital</div>
+                <p style="margin-bottom: 18px;">The IT team is happy to help you. Kindly raise requests first by using the <a href="http://itservicedesk.tatacapital.com" target="_blank">IT Service Desk Portal</a>. The link is also available on Capital Square.</p>
+                <ul class="info-list">
+                    <li>Don’t keep the stapler pin and toner near the scanner/printer as it is harmful.</li>
+                    <li>Don’t keep anything in the Server room (IT Room).</li>
+                    <li>Don’t connect any personal device to the TCL Network.</li>
+                    <li>Don’t connect any IT asset in TCL Network without IT approval which is not allocated to you.</li>
+                    <li>Always keep IT assets clean and care for them properly.</li>
+                    <li>Always keep your data backup on OneDrive.</li>
+                    <li>Always quickly respond to the IT Team for compliance-related emails.</li>
+                    <li>Always follow the IT Support Matrix.</li>
+                    <li>Visit weekly once in the branch, connect LAN cable, restart the system, and keep your laptop connected to LAN for 4 to 5 hours to get the latest update from the server.</li>
+                    <li>Daily shutdown of your system by EOD and turn on your laptop daily when you start working hours for smooth system performance.</li>
+                    <li>Additional Software: Standard software is already installed on the system. For additional software, please contact IT (<a href="mailto:ITservice@tatacapital.com">ITservice@tatacapital.com</a>) while logging requests. IT service desk will help you with the approval process.</li>
+                </ul>
+                <div class="info-subtitle"><i class="fas fa-shield-alt"></i> Cybersecurity Awareness</div>
+                <ul class="info-list">
+                    <li>Recognize phishing emails and suspicious links.</li>
+                    <li>Use strong, unique passwords and change them every 45 days.</li>
+                    <li>Never share passwords or sensitive information via email.</li>
+                    <li>Enable multi-factor authentication (MFA) wherever possible.</li>
+                </ul>
+                <div class="info-subtitle"><i class="fas fa-user-check"></i> Responsible IT Usage</div>
+                <ul class="info-list">
+                    <li>Use company devices and software only for work-related tasks.</li>
+                    <li>Avoid installing unauthorized applications.</li>
+                    <li>Report lost or stolen devices immediately to IT.</li>
+                </ul>
+                <div class="info-subtitle"><i class="fas fa-envelope"></i> Email Etiquette & Safety</div>
+                <ul class="info-list">
+                    <li>Use professional language in all communications.</li>
+                    <li>Do not forward chain mails or spam.</li>
+                    <li>Verify email addresses before sending sensitive data.</li>
+                </ul>
+                <div class="info-subtitle"><i class="fas fa-headset"></i> IT Support Process</div>
+                <ul class="info-list">
+                    <li>Raise IT requests via:</li>
+                    <li>Email: <a href="mailto:ITService@tatacapital.com">ITService@tatacapital.com</a> (fresh email only)</li>
+                    <li>Portal: <a href="http://itservicedesk.tatacapital.com" target="_blank">itservicedesk.tatacapital.com</a></li>
+                    <li>Phone: 040-6602 7799</li>
+                    <li>Follow escalation matrix for unresolved issues.</li>
+                </ul>
+                <div class="info-subtitle"><i class="fas fa-database"></i> Data Backup & Management</div>
+                <ul class="info-list">
+                    <li>Regularly back up important files to OneDrive.</li>
+                    <li>Avoid storing sensitive data on local drives or USBs.</li>
+                    <li>Follow data retention and deletion policies.</li>
+                </ul>
+                <div class="info-subtitle"><i class="fas fa-laptop"></i> Asset Management</div>
+                <ul class="info-list">
+                    <li>For asset-related queries, email: <a href="mailto:itassetmanagement@tatacapital.com">itassetmanagement@tatacapital.com</a></li>
+                    <li>Do not exchange or dispose of IT assets without approval.</li>
+                </ul>
+                <div class="info-subtitle"><i class="fas fa-bullhorn"></i> Reporting & Compliance</div>
+                <ul class="info-list">
+                    <li>Report any IT incidents or suspicious activity immediately.</li>
+                    <li>Follow company IT policies and guidelines.</li>
+                    <li>Participate in periodic IT awareness training sessions.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Email Policy – Tata Capital Section -->
+    <section id="email-policy" class="section">
+        <div class="container">
+            <div class="info-card">
+                <div class="info-title"><i class="fas fa-envelope"></i> Company Email Policy – Tata Capital</div>
+                <div class="info-subtitle"><i class="fas fa-lock"></i> Purpose</div>
+                <p>To ensure secure, professional, and responsible use of company email systems for internal and external communication.</p>
+                <div class="info-subtitle"><i class="fas fa-check-circle"></i> Usage Guidelines</div>
+                <ul class="info-list">
+                    <li>Use company email only for business-related communication.</li>
+                    <li>Do not use email for personal, promotional, or unauthorized activities.</li>
+                    <li>Always maintain a professional tone and language.</li>
+                    <li>Avoid sending confidential or sensitive information without encryption or approval.</li>
+                    <li>Email size limit is 10 MB in total size. If the email exceeds this limit, it will not be delivered to the recipient.</li>
+                </ul>
+                <div class="info-subtitle"><i class="fas fa-ban"></i> Prohibited Activities</div>
+                <ul class="info-list">
+                    <li>Sharing passwords or login credentials via email.</li>
+                    <li>Sending bulk emails without IT or management approval.</li>
+                    <li>Using email for harassment, threats, or discriminatory content.</li>
+                    <li>Forwarding chain mails, spam, or non-business-related content.</li>
+                </ul>
+                <div class="info-subtitle"><i class="fas fa-shield-alt"></i> Security Practices</div>
+                <ul class="info-list">
+                    <li>Do not click on suspicious links or attachments.</li>
+                    <li>Report phishing or unusual emails to <a href="mailto:ITService@tatacapital.com">ITService@tatacapital.com</a>.</li>
+                    <li>Change your email password every 45 days as per policy.</li>
+                    <li>Use strong passwords and enable multi-factor authentication if available.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Backup – How to Take Backup Section -->
+    <section id="data-backup" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Data Backup – How to Take Backup</h2>
+                <p>[Add content from PDF here]</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Do’s and Don'ts @ Branch Section -->
+    <section id="dos-donts" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Do’s and Don'ts @ Branch</h2>
+                <p>[Add content from PDF here]</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- IT Guidelines @ Branch Section -->
+    <section id="it-guidelines" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>IT Guidelines @ Branch</h2>
+                <p>[Add content from PDF here]</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tata Capital – IT Support Matrix Section -->
+    <section id="support-matrix" class="section">
+        <div class="container">
+            <div class="info-card">
+                <div class="info-title"><i class="fas fa-table"></i> Tata Capital – IT Support Matrix</div>
+                <div class="info-subtitle"><i class="fas fa-users"></i> For the Non-RE location where engineer physically not available</div>
+                <div style="overflow-x:auto;">
+                <table class="support-matrix-table">
+                    <thead>
+                        <tr>
+                            <th>Level 1 - Role</th>
+                            <th>S2 - Entire Branch is impacted</th>
+                            <th>S3 - One user Impacted</th>
+                            <th>Contact Name</th>
+                            <th>Mail ID</th>
+                            <th>Contact Number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Regional IT Coordinators West</td>
+                            <td>After Working 4 Hrs</td>
+                            <td>After 8 Working Hrs</td>
+                            <td>Ankit Patel</td>
+                            <td><a href="mailto:support.west@tatacapital.com">support.west@tatacapital.com</a></td>
+                            <td>9424768426</td>
+                        </tr>
+                        <tr>
+                            <td>Regional IT Coordinators North</td>
+                            <td>After Working 4 Hrs</td>
+                            <td>After 8 Working Hrs</td>
+                            <td>Anand Kumar</td>
+                            <td><a href="mailto:support.north@tatacapital.com">support.north@tatacapital.com</a></td>
+                            <td>9560045339</td>
+                        </tr>
+                        <tr>
+                            <td>Regional IT Coordinators East</td>
+                            <td>After Working 4 Hrs</td>
+                            <td>After 8 Working Hrs</td>
+                            <td>Kabir Sikdar</td>
+                            <td><a href="mailto:support.east@tatacapital.com">support.east@tatacapital.com</a></td>
+                            <td>9883348686</td>
+                        </tr>
+                        <tr>
+                            <td>Regional IT Coordinators South</td>
+                            <td>After Working 4 Hrs</td>
+                            <td>After 8 Working Hrs</td>
+                            <td>Vikas Kumar</td>
+                            <td><a href="mailto:support.south@tatacapital.com">support.south@tatacapital.com</a></td>
+                            <td>7004039157</td>
+                        </tr>
+                        <tr>
+                            <td>IT Team Lead Lower Parel</td>
+                            <td>After Working 4 Hrs</td>
+                            <td>After 8 Working Hrs</td>
+                            <td>Abhijit Sarvankar</td>
+                            <td><a href="mailto:sabhijeet.karvy@tatacapital.com">sabhijeet.karvy@tatacapital.com</a></td>
+                            <td>9930896914</td>
+                        </tr>
+                        <tr>
+                            <td>IT Team Lead Thane Lodha</td>
+                            <td>After Working 4 Hrs</td>
+                            <td>After 8 Working Hrs</td>
+                            <td>Shehzad Unawala</td>
+                            <td><a href="mailto:ushehzad.svn@tatacapital.com">ushehzad.svn@tatacapital.com</a></td>
+                            <td>9867639333</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+                <div class="info-subtitle" style="margin-top:32px;"><i class="fas fa-user-tie"></i> Central IT Team (Non-RE)</div>
+                <div style="overflow-x:auto;">
+                <table class="support-matrix-table">
+                    <thead>
+                        <tr>
+                            <th>Level 1 - Role</th>
+                            <th>S2 - Entire Branch is impacted</th>
+                            <th>S3 - One user Impacted</th>
+                            <th>Contact Name</th>
+                            <th>Mail ID</th>
+                            <th>Contact Number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Central IT Team Lead</td>
+                            <td>After Working 4 Hrs</td>
+                            <td>After 8 Working Hrs</td>
+                            <td>Varun Raj</td>
+                            <td><a href="mailto:rvarun.svn@tatacapital.com">rvarun.svn@tatacapital.com</a></td>
+                            <td>7013273064</td>
+                        </tr>
+                        <tr>
+                            <td>Central IT Team Manager</td>
+                            <td>After Working 4 Hrs</td>
+                            <td>After 8 Working Hrs</td>
+                            <td>Krishna Mohan</td>
+                            <td><a href="mailto:kmohan.hcl@tatacapital.com">kmohan.hcl@tatacapital.com</a></td>
+                            <td>9949997733</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+                <div class="info-subtitle" style="margin-top:32px;"><i class="fas fa-box"></i> Asset Management</div>
+                <p>For all your Asset management related mail please send on <a href="mailto:itassetmanagement@tatacapital.com">itassetmanagement@tatacapital.com</a></p>
+                <div class="info-subtitle" style="margin-top:32px;"><i class="fas fa-level-up-alt"></i> Escalation Contacts</div>
+                <div style="overflow-x:auto;">
+                <table class="support-matrix-table">
+                    <thead>
+                        <tr>
+                            <th>Level</th>
+                            <th>Escalation Condition</th>
+                            <th>Contact Name</th>
+                            <th>Mail ID</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Level 2</td>
+                            <td>If no resolution within 10 working hours</td>
+                            <td>Anandmohan Jha (7400166984)</td>
+                            <td><a href="mailto:janandmohan.svn@tatacapital.com">janandmohan.svn@tatacapital.com</a></td>
+                        </tr>
+                        <tr>
+                            <td>Level 3</td>
+                            <td>If no resolution after <strong>12 working hours</strong></td>
+                            <td>Vivek Gijare</td>
+                            <td><a href="mailto:vivek.gijare@tatacapital.com">vivek.gijare@tatacapital.com</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Support Process</h2>
+                <p>Streamlined workflow for efficient issue resolution</p>
+            </div>
+            <div class="process-flow">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Issue Identification</h3>
+                        <p>User reports issue through multiple channels</p>
+                        <div class="step-channels">
+                            <span><i class="fas fa-phone"></i> Phone</span>
+                            <span><i class="fas fa-envelope"></i> Email</span>
+                            <span><i class="fas fa-comments"></i> Chat</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Ticket Creation</h3>
+                        <p>Automated ticket generation with priority assignment</p>
+                        <div class="priority-levels">
+                            <span class="priority critical">Critical</span>
+                            <span class="priority high">High</span>
+                            <span class="priority medium">Medium</span>
+                            <span class="priority low">Low</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Initial Assessment</h3>
+                        <p>Quick evaluation and categorization of the issue</p>
+                        <div class="assessment-types">
+                            <span>Hardware</span>
+                            <span>Software</span>
+                            <span>Network</span>
+                            <span>Security</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Resolution & Testing</h3>
+                        <p>Implement solution and verify resolution</p>
+                        <div class="resolution-steps">
+                            <span>Apply Fix</span>
+                            <span>Test Solution</span>
+                            <span>Document Changes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Closure & Feedback</h3>
+                        <p>Close ticket and gather customer feedback</p>
+                        <div class="closure-actions">
+                            <span>Update Knowledge Base</span>
+                            <span>Customer Survey</span>
+                            <span>Follow-up if needed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Support</h2>
+                <p>Get in touch with our IT support team</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone Support</h3>
+                            <p>+91 1800-XXX-XXXX</p>
+                            <span>24/7 Available</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email Support</h3>
+                            <p>itsupport@tatacapital.com</p>
+                            <span>Response within 2 hours</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Live Chat</h3>
+                            <p>Available on Portal</p>
+                            <span>Instant Response</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="supportForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="priority">Priority Level</label>
+                            <select id="priority" name="priority" required>
+                                <option value="">Select Priority</option>
+                                <option value="critical">Critical</option>
+                                <option value="high">High</option>
+                                <option value="medium">Medium</option>
+                                <option value="low">Low</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Issue Category</label>
+                            <select id="category" name="category" required>
+                                <option value="">Select Category</option>
+                                <option value="hardware">Hardware</option>
+                                <option value="software">Software</option>
+                                <option value="network">Network</option>
+                                <option value="security">Security</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Issue Description</label>
+                            <textarea id="description" name="description" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Ticket</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Tata Capital IT Support</h3>
+                    <p>Delivering exceptional technical support with streamlined processes and data-driven metrics.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#sops">SOPs</a></li>
+                        <li><a href="#escalation">Escalation</a></li>
+                        <li><a href="#metrics">Metrics</a></li>
+                        <li><a href="#process">Process</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: itsupport@tatacapital.com</p>
+                    <p>Phone: +91 1800-XXX-XXXX</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tata Capital IT Support Service. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for SOP Details -->
+    <div id="sopModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
